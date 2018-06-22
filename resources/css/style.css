@@ -15,8 +15,6 @@
   color: MediumAquamarine;
   display: flex;
   align-items: center;
-  flex: 1 1;
-  padding: 0 0px;
 }
 
 #header-logo p {
@@ -26,12 +24,11 @@
 
 #header-navigation {
   display: flex;
-
+  flex-wrap: nowrap;
+  justify-content: space-between;
 }
 
-.header-nav-btn {
+.header-nav-btn a {
   color: black;
-  justify-content: space-around;
   padding: 0 20px;
-
 }
