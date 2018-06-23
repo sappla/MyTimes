@@ -6,6 +6,7 @@
 - Main Content
     > Columns layout
     > Articles layout
+    > Titles
 
 
  */
@@ -67,6 +68,7 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
+  margin: 40px 0px;
 
   border: 2px dotted green;
 }
@@ -74,8 +76,8 @@ body {
 /* -  > Columns layout */
 .column {
   display: flex;
-  flex-flow: column nowrap;
-  margin: 40px 20px;
+  flex-direction: column;
+  margin: 10px 20px;
 
   border: 2px dotted blue;
 }
@@ -94,7 +96,38 @@ body {
 }
 
 /* -  > Articles Layout */
-.title {
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+  border: 2px dotted red;
+}
+
+.boxed-article {
+  flex: 1 1 200px;
+  padding: 0 20px;
+
+  border: 2px dotted green;
+}
+
+.boxed-article > a:first-of-type {
+  text-decoration: none;
+}
+
+.location {
+  text-transform: uppercase;
+}
+
+article {
+  padding-top: 20px;
+
+  //border: 2px dotted MediumAquamarine;
+}
+
+/* -  > Titles */
+.title.image {
   background-color: #f2f2f2;
   background-position: center;
   background-size: cover;
@@ -104,25 +137,39 @@ body {
   text-align: center;
   line-height: 150%;
   padding: 100px;
-  flex: 1 1 100px;
+  flex: 1 1 200px;
 }
 
-.location {
-  text-transform: uppercase;
+.title.no-image {
+  margin: 0;
+  text-align: center;
+  line-height: 150%;
+  padding: 5px;
 }
 
-article {
-  padding-bottom: 20px;
-
-  border: 2px dotted MediumAquamarine;
-}
-
-/* -  > Featured layout */
-.featured:first-child > .title {
+#main-featured .title {
   background-image: url("../media/images/img-story-main.png");
   padding: 150px 100px;
   font-size: 2em;
 }
+
+#box1 .title {
+  background-image: url("../media/images/img-story-2.png");
+  flex: 0 0 150px;
+}
+
+#box2 .title {
+  background-image: url("../media/images/img-story-3.png");
+  flex: 0 0 150px;
+}
+
+
+
+
+
+
+
+
 
 .featured:nth-child(1n+2) > .title {
   color: yellow;
