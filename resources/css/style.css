@@ -8,6 +8,9 @@
     > Articles layout
     > Articles titles
     > News Bites section
+- Footer
+    >
+    >
 
 
  */
@@ -29,7 +32,7 @@ body {
   align-items: center;
   flex-wrap: wrap;
 
-  //border: 2px dotted red;
+  border: 2px dotted red;
 }
 
 /* -  > Logo */
@@ -71,7 +74,7 @@ body {
   flex-wrap: wrap;
   margin: 30px 0px;
 
-  //border: 2px dotted green;
+  border: 2px dotted green;
 }
 
 /* -  > Columns layout */
@@ -218,4 +221,12 @@ article {
   color: #808080;
   text-decoration: none;
   font-size: .80em;
+}
+
+/* - Footer */
+footer {
+  background-color: MediumAquamarine;
+
+  border: 2px dotted red;
+  height: 200px;
 }
