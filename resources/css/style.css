@@ -6,7 +6,8 @@
 - Main Content
     > Columns layout
     > Articles layout
-    > Titles
+    > Articles titles
+    > News Bites section
 
 
  */
@@ -38,7 +39,7 @@ body {
   align-items: center;
   flex-grow: 3;
 
-  border: 2px dotted red;
+  //border: 2px dotted red;
 }
 
 .header-logo p {
@@ -55,7 +56,7 @@ body {
   flex: 1;
   min-height: 63px;
 
-  border: 2px dotted red;
+  //border: 2px dotted red;
 }
 
 .header-nav-btn a {
@@ -68,9 +69,9 @@ body {
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  margin: 40px 0px;
+  margin: 30px 0px;
 
-  border: 2px dotted green;
+  //border: 2px dotted green;
 }
 
 /* -  > Columns layout */
@@ -79,7 +80,7 @@ body {
   flex-direction: column;
   margin: 10px 20px;
 
-  border: 2px dotted blue;
+  //border: 2px dotted blue;
 }
 
 .column.large {
@@ -88,7 +89,6 @@ body {
 
 .column.medium {
   flex: 2 2 300px;
-
 }
 
 .column.small {
@@ -102,18 +102,23 @@ body {
   justify-content: space-between;
   margin-bottom: 20px;
 
-  border: 2px dotted red;
+  //border: 2px dotted red;
 }
 
 .boxed-article {
   flex: 1 1 200px;
   padding: 0 20px;
 
-  border: 2px dotted green;
+  //border: 2px dotted green;
 }
 
 .boxed-article > a:first-of-type {
   text-decoration: none;
+}
+
+.side {
+  flex: 0 1 200px;
+  margin-bottom: 40px;
 }
 
 .location {
@@ -126,7 +131,7 @@ article {
   //border: 2px dotted MediumAquamarine;
 }
 
-/* -  > Titles */
+/* -  > Articles titles */
 .title.image {
   background-color: #f2f2f2;
   background-position: center;
@@ -136,53 +141,81 @@ article {
   font-size: 1.5em;
   text-align: center;
   line-height: 150%;
-  padding: 100px;
+  padding: 100px 50px;
   flex: 1 1 200px;
 }
 
 .title.no-image {
   margin: 0;
-  text-align: center;
   line-height: 150%;
   padding: 5px;
 }
 
+#main-featured {
+  padding: 0 20px;
+}
+
 #main-featured .title {
   background-image: url("../media/images/img-story-main.png");
+  text-align: left;
   padding: 150px 100px;
   font-size: 2em;
 }
 
 #box1 .title {
   background-image: url("../media/images/img-story-2.png");
-  flex: 0 0 150px;
+  margin-bottom: 20px;
 }
 
 #box2 .title {
   background-image: url("../media/images/img-story-3.png");
-  flex: 0 0 150px;
+  margin-bottom: 20px;
 }
 
-
-
-
-
-
-
-
-
-.featured:nth-child(1n+2) > .title {
-  color: yellow;
+#box3 .title {
+  background-image: url("../media/images/img-story-1.png");
+  padding: 150px 100px;
 }
 
+/* -  > News Bites section */
+.bites-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 0 20px;
 
-
-
-
-.side > .title {
-  color: blue;
+  //border: 2px dotted black;
 }
 
-.news-bites > .title {
-  color: green;
+.news-bites-img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.news-bites-img h4{
+  margin-top: 0;
+  margin-bottom: 20px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.news-bites-list {
+  display: flex;
+  flex-flow: column wrap;
+  flex: 1 1 400px;
+}
+
+.news-bites-nav-btn {
+  list-style: none;
+  padding: 15px 30px;
+  background-color: #f2f2f2;;
+  border-bottom: 1px solid black;
+}
+
+.news-bites-nav-btn a {
+  color: #808080;
+  text-decoration: none;
+  font-size: .80em;
 }
