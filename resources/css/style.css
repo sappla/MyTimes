@@ -16,14 +16,34 @@
 
 body {
   padding: 0 20px;
+  margin: 0;
   font-family: Verdana;
+  margin-top: 0;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: white;
+  opacity: .9;
+  z-index: 2;
+}
+
+.scrollable {
+  position: absolute;
+  top: 126px;
+  left: 0;
+  right: 0;
 }
 
 /* - Header */
 header {
   font-size: 14px;
   font-weight: bold;
-  padding: 10px 0;
+  padding: 10px 20px;
   border-bottom: 1px solid black;
   display: flex;
   justify-content: space-between;
@@ -79,7 +99,7 @@ header {
 .column {
   display: flex;
   flex-direction: column;
-  margin: 10px 20px;
+  margin: 0 20px;
 
   //border: 2px dotted blue;
 }
